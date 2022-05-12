@@ -39,18 +39,7 @@ public class notebook : MonoBehaviour
         string fileContents = File.ReadAllText(saveFile);
         print(fileContents);
         SaveData.NotebookNotes test = new SaveData.NotebookNotes();
-        /*print(test.firstTime + "kdddd");
-        if (test.firstTime == false)
-        {   
-            test = JsonUtility.FromJson<SaveData.NotebookNotes>(fileContents);
 
-            string[] notebookdata = { test.note1, test.note2, test.note2, test.note3, test.note4, test.note5 };
-
-            for (int x = 0; x < noteInputs.Length; x++)
-            {
-                noteInputs[x].text = notebookdata[x];
-            }
-        }*/
         test = JsonUtility.FromJson<SaveData.NotebookNotes>(fileContents);
 
         string[] notebookdata = { test.note1, test.note2, test.note3, test.note4, test.note5 };
