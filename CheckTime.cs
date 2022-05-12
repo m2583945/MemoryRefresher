@@ -118,8 +118,7 @@ public class CheckTime : MonoBehaviour
                         }
                     }
                 }
-                //timeLastPlayedText.text = "It has been " + timePassed.ToString("%d") + " days " + timePassed.ToString("%h") + " hours " +
-                 //   timePassed.ToString("%m") + " minutes " + timePassed.ToString("%s") + " seconds since you last saved the game"; //print on screen
+
                 timeLastPlayedText.text = timeRecordString;
             }
 
