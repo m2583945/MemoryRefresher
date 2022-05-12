@@ -38,7 +38,7 @@ public class SaveData : MonoBehaviour
         saveTime = DateTime.Now;
         tls.dt = DateTime.Now;
 
-        //save the year/month/time individually sorry idk if there's a better way to do this
+        //save the year/month/time individually 
         tls.saveYear = tls.dt.Year;
         tls.saveMonth = tls.dt.Month;
         tls.saveDay = tls.dt.Day;
@@ -52,7 +52,7 @@ public class SaveData : MonoBehaviour
     {
         //nn.firstTime = false;
         notebook nb = GameObject.Find("NOTEBOOK").GetComponent<notebook>();
-        nn.note1 = nb.noteInputs[0].text;//there's probably a better way to do this but i don't know how to use arrays with json :/
+        nn.note1 = nb.noteInputs[0].text;//keeps track of 5 different notebook components
         nn.note2 = nb.noteInputs[1].text;
         nn.note3 = nb.noteInputs[2].text;
         nn.note4 = nb.noteInputs[3].text;
@@ -62,7 +62,7 @@ public class SaveData : MonoBehaviour
     }
     public void test()
     {
-        print("Last saved at" + saveTime);
+        print("Last saved at" + saveTime);//DEBUGGING
     }
     [System.Serializable]
     public class TimeLastSaved
@@ -85,8 +85,6 @@ public class SaveData : MonoBehaviour
         public String note3;
         public String note4;
         public String note5;
-
-        //public bool firstTime = true;
 
     }
 }
